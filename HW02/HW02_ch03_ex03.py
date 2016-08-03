@@ -40,16 +40,62 @@
 # Write your functions below:
 # Body
 
+def do_twice(f):
+    f()
+    f()
+
+def do_four(f):
+    do_twice(f)
+    do_twice(f)
+
+def header():
+    print("+ - - - -", end=' ')
+
+def headers2():
+    do_twice(header)
+    print('+')
+
+def headers4():
+    do_four(header)
+    print('+')
+
+def column():
+    print("|        ", end=' ')
+
+def columns2():
+    do_twice(column)
+    print("|")
+
+def columns4():
+    do_four(column)
+    print("|")
+
+def two_by_two():
+    do_twice(header)
+    print('+')
+    do_four(columns2)
+    do_twice(header)
+    print('+')
+    do_four(columns2)
+    do_twice(header)
+    print('+')
 
 
-
-
-
-
-
-
-
-
+def four_by_four():
+    do_four(header)
+    print('+')
+    do_four(columns4)
+    do_four(header)
+    print('+')
+    do_four(columns4)
+    do_four(header)
+    print('+')   
+    do_four(columns4)
+    do_four(header)
+    print('+')
+    do_four(columns4)
+    do_four(header)
+    print('+') 
 
 # Write your functions above:
 ################################################################################
@@ -60,8 +106,8 @@ def main():
     four_by_four()
     """
     print("Hello World!")
-    
-
+    two_by_two()
+    four_by_four()
 
 
 if __name__ == "__main__":
